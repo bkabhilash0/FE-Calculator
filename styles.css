@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --main-background: hsl(222, 26%, 31%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --textarea-background: hsl(224, 36%, 15%);
+  --key-blue: hsl(225, 21%, 49%);
+  --key-toggle: hsl(6, 63%, 50%);
+  --key-red: hsl(30, 25%, 89%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background: var(--main-background);
+  font-size: 3.2rem;
+}
+
+.calc {
+  padding: 2rem;
+  width: 100%;
+  /* max-width: 375px; */
+}
+
+.calc__logo {
+  color: #fff;
+  font: inherit;
+}
+
+.calc__input {
+  outline: none;
+  border: none;
+  padding: 2.5rem 3rem;
+  font-size: 3.2rem;
+  width: 100%;
+  border-radius: 1rem;
+  background: var(--textarea-background);
+  text-align: right;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.calc__keypad {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--keypad-background);
+  border-radius: 1rem;
+  height: 50%;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#del,
+#reset {
+  background: var(--key-blue);
+  color: #fff;
+  font-size: 2rem;
+}
+
+#equals {
+  background: var(--key-toggle);
+  color: #fff;
+  font-size: 2rem;
+}
+
+#reset {
+  grid-column: 1 / span 2;
+}
+
+#equals {
+  grid-column: 3 / span 2;
+}
