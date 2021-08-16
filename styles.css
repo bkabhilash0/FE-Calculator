@@ -13,6 +13,8 @@ html {
   --key-red: hsl(30, 25%, 89%);
 }
 
+// CSS Reset zee
+
 * {
   padding: 0;
   margin: 0;
